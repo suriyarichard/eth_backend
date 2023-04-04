@@ -22,7 +22,11 @@ const reclaim = new Reclaim(callbackUrl)
 const isValidRepo = (repoStr: string) => {
 	return repoStr.indexOf('/') > -1 && repoStr.split('/').length === 2
 }
-
+app.get("/",(req,res)=>{
+	res.send(
+		"hello"
+	);
+})
 app.get('/home/repo', async (req: Request, res: Response) => {
 	const { repo, email } = req.query
 	if (!repo || !email) {
