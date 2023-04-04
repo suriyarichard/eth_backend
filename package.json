@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "Prove that the user is a contributor to a given repo using reclaim protocol",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "build": "tsc && node-pg-migrate up",
-    "start": "node src/index.ts",
+    "start": "node dist/index.js",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
     "migrate": "node-pg-migrate"
   },

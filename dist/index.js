@@ -30,6 +30,9 @@ const reclaim = new reclaim_sdk_1.Reclaim(callbackUrl);
 const isValidRepo = (repoStr) => {
     return repoStr.indexOf('/') > -1 && repoStr.split('/').length === 2;
 };
+app.get("/", (req, res) => {
+    res.send("hello");
+});
 app.get('/home/repo', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { repo, email } = req.query;
     if (!repo || !email) {
